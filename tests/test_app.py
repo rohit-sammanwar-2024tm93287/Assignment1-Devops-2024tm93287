@@ -31,7 +31,7 @@ def test_add_workout_success(client):
 def test_list_workouts(client):
     client.post(
         "/workouts",
-        data=json.dumps({"workout": "Cycling", "duration": 45}),
+        data=json.dumps({"workout": "Cycling", "duration": 44}),
         content_type="application/json",
     )
     resp = client.get("/workouts")
